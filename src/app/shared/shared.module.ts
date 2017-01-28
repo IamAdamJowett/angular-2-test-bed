@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -9,4 +9,13 @@ import { MainNavComponent } from './main-nav/main-nav.component';
   exports: [ MainNavComponent, CommonModule ]
 })
 
-export class SharedModule { }
+export class SharedModule {
+
+    static forRoot(): ModuleWithProviders {
+        return {
+            ngModule: SharedModule,
+            providers: [
+            ]
+        };
+    }
+}

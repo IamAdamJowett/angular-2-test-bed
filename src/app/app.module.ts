@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
